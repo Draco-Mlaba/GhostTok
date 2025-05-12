@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GhostTok - Anonymous Confessions & Dares</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+        }
+
+        header {
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 22px;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .btn-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #ff69b4;
+            border: none;
+            padding: 14px 26px;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e35caa;
+        }
+
+        .preview-section {
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.05);
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 12px;
+        }
+
+        .post {
+            border-bottom: 1px solid #555;
+            padding: 15px 0;
+        }
+
+        .how-it-works {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.03);
+            margin-top: 40px;
+        }
+
+        .step {
+            max-width: 200px;
+            text-align: center;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to GhostTok</h1>
+        <p class="tagline">Where secrets are whispered and dares are wild – anonymously!</p>
+    </header>
+
+    <div class="btn-container">
+        <button class="btn" onclick="location.href='confession.jsp'">Post Confession/Dare</button>
+        <button class="btn" onclick="location.href='viewPosts.jsp'">View Posts</button>
+    </div>
+
+    <div class="preview-section">
+        <h2>Latest Ghosts 🕵️</h2>
+        <div class="post">"I once faked a call to escape a boring date..."</div>
+        <div class="post">"My dare is to text my crush 'I love you' and screenshot it!"</div>
+        <div class="post">"I dance like crazy when no one's home. Every. Single. Time."</div>
+    </div>
+
+    <div class="how-it-works">
+        <div class="step">
+            <h3>1. Be Anonymous</h3>
+            <p>No account needed. Just speak your truth.</p>
+        </div>
+        <div class="step">
+            <h3>2. Post or Dare</h3>
+            <p>Send a confession or create a fun dare.</p>
+        </div>
+        <div class="step">
+            <h3>3. Read & React</h3>
+            <p>View other posts and interact safely.</p>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn">↑</button>
+
+    <footer>
+        &copy; 2025 GhostTok. Dare to Speak.
+    </footer>
+
+    <script>
+        // Scroll-to-top button
+        let topBtn = document.getElementById("topBtn");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
