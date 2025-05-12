@@ -33,14 +33,14 @@ public class ConfessionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
         String message = request.getParameter("message");
+        String username = "Anonymous";
 
         if (username != null && message != null && !message.isEmpty()) {
             cb.saveConfession(username, message);
         }
 
-        response.sendRedirect("confession"); // mapped in web.xml
+       request.getRequestDispatcher("confession.jsp").forward(request, response);
     }
 }
 
